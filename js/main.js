@@ -1,3 +1,5 @@
+var stack = new StaticStack();
+
 $().ready(function() {
 
     $('#push').on('click', pushElement);
@@ -7,8 +9,6 @@ $().ready(function() {
     $('#pop').on('click', popElement);
     $('#clear').on('click', clearStack);
 });
-
-var stack = new Stack();
 
 function pushElement() {
     var item = $('#item').val();
@@ -39,5 +39,5 @@ function showStack() {
     $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append(stack.peek());
+    $('#stackPeek').append("indice "+ stack.peek());
 }
