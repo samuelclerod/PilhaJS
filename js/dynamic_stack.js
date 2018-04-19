@@ -39,5 +39,14 @@ class DynamicStack {
         this.length=0;
     }
 
-    print(separator=' - ') {}
+    print(separator=" - ") {
+        if(!top) return "";
+        let current = this.top.next,
+            s=this.top.element;
+        while(current){
+            s+=separator+current.element;
+            current=current.next;
+        }
+        return s;
+    }
 }
