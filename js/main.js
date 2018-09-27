@@ -1,4 +1,4 @@
-var stack = new DynamicStack();
+var stack = new StaticStack();
 
 $().ready(function() {
 
