@@ -17,7 +17,7 @@ class StaticStack {
     }
 
     isEmpty() {
-        return this.data.size()===0
+        return this.size()===0
     }
 
     size() {
@@ -27,9 +27,14 @@ class StaticStack {
     clear() {
         this.data = [];
     }
-    
+
     print(separator=' - ') {
-        
+        if (this.isEmpty())
+            return '';
+        let s = ''+this.data[this.peek()];
+        for (let i = this.peek()-1; i >=0; i--)
+            s+=separator+this.data[i];
+        return s;
     }
 
 }
