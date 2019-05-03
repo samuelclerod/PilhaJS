@@ -5,7 +5,7 @@ $().ready(function() {
     $('#push').on('click', pushElement);
     $('#item').keydown(function(e) {
         if (e.which == 13) pushElement();
-    })
+    });
     $('#pop').on('click', popElement);
     $('#clear').on('click', clearStack);
 });
