@@ -37,7 +37,8 @@ class DinamicStack {
     }
 
     clear() {
-        this.top=null;
+        this.top=null ;
+        this.length = 0;
     }
 
     print(separator = ' - ') {
