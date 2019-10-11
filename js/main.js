@@ -39,5 +39,5 @@ function showStack() {
     $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append("indice "+ stack.peek());
+    $('#stackPeek').append(stack.peek());
 }
