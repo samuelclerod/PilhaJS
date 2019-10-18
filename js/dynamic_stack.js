@@ -36,8 +36,13 @@ class DynamicStack {
 
     clear() {
         this.top= null;
+        this.length=0;
     }
 
     print(separator = ' - ') {
+        let s = "";
+        for(let node = this.top; node!=null ; node=node.next)
+            s+=node.element+separator;
+        return s.substring(0, s.length-separator.length);
     }
 }
