@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--libs imports-->
+    <link rel="stylesheet" href="lib/semantic.min.css">
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/semantic.min.js"></script>
+    <!-- struture imports -->
+    <script src="js/node.js"></script>
+    <script src="js/static_stack.js"></script>
+    <script src="js/dynamic_stack.js"></script>
+    <script src="js/main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="ui container" style="margin:auto;width:600px;">
+        <h2 class="ui header">Pilha</h2>
+        <div class="ui center aligned padded segment">
+            <div class="ui input">
+                <input placeholder="Item a ser inserido" type="text" name="item" id="item" />
+            </div>
+            <div class="ui buttons">
+                <button class="ui button" id="push">empilhar</button>
+                <button class="ui button" id="pop">desempilhar</button>
+                <button class="ui button" id="clear">limpar</button>
+            </div>
+        </div>
+        <div class="ui two column grid">
+            <div class="cented column">
+                <div class="ui segment">
+                    <a class="ui ribbon label">Pilha</a>
+                    <div class="ui center aligned container">
+                        <div class="ui pointing below basic label">topo</div>
+                        <p id="output"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui padded secondary segment">
+                    <p><b>Tamanho: </b><span id="stackSize"></span></p>
+                    <p><b>Topo: </b><span id="stackPeek"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html
