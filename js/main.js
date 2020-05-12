@@ -1,4 +1,4 @@
-var stack = new StaticStack();
+var stack = new StaticStack2();
 
 $().ready(function () {
 
@@ -39,5 +39,5 @@ function showStack() {
     $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append("indice " + stack.peek());
+    $('#stackPeek').append(stack.peek());
 }
