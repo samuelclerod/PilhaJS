@@ -1,4 +1,4 @@
-var stack = new StaticStack2();
+var stack = new DynamicStack();
 
 $().ready(function () {
 
@@ -20,7 +20,7 @@ function pushElement() {
 }
 
 function popElement() {
-    if (stack.isEmpty() == false) {
+    if (!stack.isEmpty()) {
         alert('Foi removido o elemento ' + stack.pop());
         showStack();
     } else {
