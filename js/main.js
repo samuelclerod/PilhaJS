@@ -1,9 +1,9 @@
-var stack = new StaticStack();
+var stack = new DynamicStack();
 
-$().ready(function() {
+$().ready(function () {
 
     $('#push').on('click', pushElement);
-    $('#item').keydown(function(e) {
+    $('#item').keydown(function (e) {
         if (e.which == 13) pushElement();
     })
     $('#pop').on('click', popElement);
@@ -34,10 +34,22 @@ function clearStack() {
 }
 
 function showStack() {
+    renderOutput()
+    renderSize()
+    renderPeek()
+}
+
+function renderOutput(element) {
     $('#output').empty();
-    $('#stackSize').empty();
-    $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
+}
+
+function renderSize() {
+    $('#stackSize').empty();
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append("indice "+ stack.peek());
+}
+
+function renderPeek() {
+    $('#stackPeek').empty();
+    $('#stackPeek').append(stack.peek());
 }
