@@ -1,9 +1,9 @@
 var stack = new StaticStack();
 
-$().ready(function() {
+$().ready(function () {
 
     $('#push').on('click', pushElement);
-    $('#item').keydown(function(e) {
+    $('#item').keydown(function (e) {
         if (e.which == 13) pushElement();
     })
     $('#pop').on('click', popElement);
@@ -39,5 +39,5 @@ function showStack() {
     $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append("indice "+ stack.peek());
+    $('#stackPeek').append("topo: " + stack.peek());
 }
