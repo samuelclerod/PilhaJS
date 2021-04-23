@@ -1,4 +1,4 @@
-var stack = new StaticStack();
+var stack = new DynamicStack();
 
 $().ready(function () {
 
@@ -20,11 +20,11 @@ function pushElement() {
 }
 
 function popElement() {
-    if (stack.isEmpty() == false) {
+    try {
         alert('Foi removido o elemento ' + stack.pop());
         showStack();
-    } else {
-        alert('Pilha Vazia');
+    } catch (error) {
+        alert(error);
     }
 }
 
@@ -39,5 +39,5 @@ function showStack() {
     $('#stackPeek').empty();
     $('#output').append(stack.print('<br />'));
     $('#stackSize').append(stack.size());
-    $('#stackPeek').append("topo: " + stack.peek());
+    $('#stackPeek').append(stack.peek());
 }
