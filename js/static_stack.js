@@ -1,39 +1,17 @@
 class StaticStack {
+  constructor() {}
 
-    constructor() {
-        this.data = [];
-    }
+  push(element) {}
 
-    push(element) {
-        this.data.push(element);
-    }
+  pop() {}
 
-    pop() {
-        return this.data.pop();
-    }
+  peek() {}
 
-    peek() {
-        const lastIndex = this.data.length - 1;
-        return this.data[lastIndex];
-    }
+  isEmpty() {}
 
-    isEmpty() {
-        return this.data.length === 0;
-    }
+  size() {}
 
-    size() {
-        return this.data.length;
-    }
+  clear() {}
 
-    clear() {
-        this.data = [];
-    }
-
-    print(separator = ' - ') {
-        let s = '';
-        for (let i = this.data.length - 1; i >= 0; i--) {
-            s += this.data[i] + separator;
-        }
-        return s.substr(0, (s.length - separator.length));
-    }
+  print(separator = " - ") {}
 }
