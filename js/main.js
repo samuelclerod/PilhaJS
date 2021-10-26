@@ -1,43 +1,42 @@
-var stack = new DynamicStack();
+var stack = new StaticStack();
 
 $().ready(function () {
-
-    $('#push').on('click', pushElement);
-    $('#item').keydown(function (e) {
-        if (e.which == 13) pushElement();
-    })
-    $('#pop').on('click', popElement);
-    $('#clear').on('click', clearStack);
+  $("#push").on("click", pushElement);
+  $("#item").keydown(function (e) {
+    if (e.which == 13) pushElement();
+  });
+  $("#pop").on("click", popElement);
+  $("#clear").on("click", clearStack);
 });
 
 function pushElement() {
-    var item = $('#item').val();
-    if (item) {
-        stack.push(item);
-        $('#item').val('');
-        showStack();
-    }
+  var item = $("#item").val();
+  if (item) {
+    stack.push(parseInt(item));
+    $("#item").val("");
+    showStack();
+  }
 }
 
 function popElement() {
-    try {
-        alert('Foi removido o elemento ' + stack.pop());
-        showStack();
-    } catch (error) {
-        alert(error);
-    }
+  try {
+    alert("Foi removido o elemento " + stack.pop());
+    showStack();
+  } catch (error) {
+    alert(error);
+  }
 }
 
 function clearStack() {
-    stack.clear();
-    showStack();
+  stack.clear();
+  showStack();
 }
 
 function showStack() {
-    $('#output').empty();
-    $('#stackSize').empty();
-    $('#stackPeek').empty();
-    $('#output').append(stack.print('<br />'));
-    $('#stackSize').append(stack.size());
-    $('#stackPeek').append(stack.peek());
+  $("#output").empty();
+  $("#stackSize").empty();
+  $("#stackPeek").empty();
+  $("#output").append(stack.print("<br />"));
+  $("#stackSize").append(stack.size());
+  $("#stackPeek").append(stack.peek());
 }
